@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Ducktable{% endblock %}
+
+{% block body %}
+    <h1>Create a new Duck</h1>
+
+    {{ include('ducktable/_form.html.twig') }}
+
+    <a href="{{ path('ducktable_index') }}">back to list</a>
+{% endblock %}

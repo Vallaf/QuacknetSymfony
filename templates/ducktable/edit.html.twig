@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Ducktable{% endblock %}
+
+{% block body %}
+    <h1>Edit Ducktable</h1>
+
+    {{ include('ducktable/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('ducktable_index') }}">back to list</a>
+
+    {{ include('ducktable/_delete_form.html.twig') }}
+{% endblock %}

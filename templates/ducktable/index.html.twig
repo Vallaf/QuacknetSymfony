@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ducktable index{% endblock %}
+
+{% block body %}
+    <h1>Ducktable index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Duckname</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ducktable in ducktables %}
+            <tr>
+                <td>{{ ducktable.id }}</td>
+                <td>{{ ducktable.Firstname }}</td>
+                <td>{{ ducktable.Lastname }}</td>
+                <td>{{ ducktable.Duckname }}</td>
+                <td>{{ ducktable.Email }}</td>
+                <td>{{ ducktable.Password }}</td>
+                <td>
+                    <a href="{{ path('ducktable_show', {'id': ducktable.id}) }}">show</a>
+                    <a href="{{ path('ducktable_edit', {'id': ducktable.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('ducktable_new') }}">Create new</a>
+{% endblock %}
