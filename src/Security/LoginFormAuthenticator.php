@@ -61,7 +61,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             throw new InvalidCsrfTokenException();
         }
 
-        $user = $this->entityManager->getRepository(Ducktable::class)->findOneBy(['Email' => $credentials['Email']]);
+        $user = $this->entityManager->getRepository(Ducktable::class)->loadUserByUsername($credentials['Email']);
 
         if (!$user) {
             // fail authentication with a custom error
