@@ -1,7 +1,12 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        users:
+            entity:
+                # the class of the entity that represents users
+                class: 'App\Entity\Ducktable'
+                # the property to query by - e.g. username, email, etc
+                property: 'email'
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/

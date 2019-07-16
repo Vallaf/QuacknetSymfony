@@ -38,7 +38,7 @@ class Ducktable implements UserInterface
     private $Email;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="text", nullable=false)
      */
     private $Password;
 
@@ -123,7 +123,7 @@ class Ducktable implements UserInterface
      */
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        return array('ROLE_USER');
     }
 
     /**
@@ -145,7 +145,7 @@ class Ducktable implements UserInterface
      */
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
+        return $this->getDuckname();
     }
 
     /**
