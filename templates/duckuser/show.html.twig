@@ -1,42 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ducktable{% endblock %}
+{% block title %}Duckuser{% endblock %}
 
 {% block body %}
-    <h1>Ducktable</h1>
+    <h1>Duckuser</h1>
 
     <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ ducktable.id }}</td>
+                <td>{{ duckuser.id }}</td>
             </tr>
             <tr>
                 <th>Firstname</th>
-                <td>{{ ducktable.Firstname }}</td>
+                <td>{{ duckuser.Firstname }}</td>
             </tr>
             <tr>
                 <th>Lastname</th>
-                <td>{{ ducktable.Lastname }}</td>
+                <td>{{ duckuser.Lastname }}</td>
             </tr>
             <tr>
                 <th>Duckname</th>
-                <td>{{ ducktable.Duckname }}</td>
+                <td>{{ duckuser.Duckname }}</td>
             </tr>
             <tr>
                 <th>Email</th>
-                <td>{{ ducktable.Email }}</td>
+                <td>{{ duckuser.Email }}</td>
             </tr>
             <tr>
                 <th>Password</th>
-                <td>{{ ducktable.Password }}</td>
+                <td>{{ duckuser.Password }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('ducktable_index') }}">back to list</a>
+    <a href="{{ path('duckuser_index') }}">back to list</a>
 
-    <a href="{{ path('ducktable_edit', {'id': ducktable.id}) }}">edit</a>
+    <a href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
 
-    {{ include('ducktable/_delete_form.html.twig') }}
+    {{ include('duckuser/_delete_form.html.twig') }}
 {% endblock %}

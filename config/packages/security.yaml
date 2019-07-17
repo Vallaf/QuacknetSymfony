@@ -1,10 +1,12 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\Duckuser: native
     providers:
         users:
             entity:
                 # the class of the entity that represents users
-                class: 'App\Entity\Ducktable'
+                class: 'App\Entity\Duckuser'
                 # the property to query by - e.g. username, email, etc
                 property: 'email'
     firewalls:

@@ -2,28 +2,29 @@
 
 namespace App\Form;
 
-use App\Entity\Ducktable;
+use App\Entity\Duckuser;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DucktableType extends AbstractType
+class DuckuserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Firstname')
-            ->add('Lastname')
-            ->add('Duckname')
-            ->add('Email')
-            ->add('Password')
+            ->add('firstname')
+            ->add('lastname')
+            ->add('email')
+            ->add('duckname')
+            ->add('password')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Ducktable::class,
+            'data_class' => Duckuser::class,
         ]);
     }
 }

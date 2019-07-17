@@ -2,7 +2,7 @@
 
 namespace App\Security;
 
-use App\Entity\Ducktable;
+use App\Entity\Duckuser;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -42,13 +42,13 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
     public function getCredentials(Request $request)
     {
         $credentials = [
-            'Email' => $request->request->get('Email'),
+            'email' => $request->request->get('email'),
             'password' => $request->request->get('password'),
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
         $request->getSession()->set(
             Security::LAST_USERNAME,
-            $credentials['Email']
+            $credentials['email']
         );
 
         return $credentials;
@@ -61,7 +61,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             throw new InvalidCsrfTokenException();
         }
 
-        $user = $this->entityManager->getRepository(Ducktable::class)->loadUserByUsername($credentials['Email']);
+        $user = $this->entityManager->getRepository(Duckuser::class)->loadUserByUsername($credentials['email']);
 
         if (!$user) {
             // fail authentication with a custom error
