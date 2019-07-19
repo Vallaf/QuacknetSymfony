@@ -26,6 +26,22 @@ class Quack
      */
     private $created_at;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $tags;
+
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Duckuser", inversedBy="author")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,4 +70,42 @@ class Quack
 
         return $this;
     }
+
+    public function getTags(): ?string
+    {
+        return $this->tags;
+    }
+
+    public function setTags(?string $tags): self
+    {
+        $this->tags = $tags;
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?Duckuser
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?Duckuser $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+
 }

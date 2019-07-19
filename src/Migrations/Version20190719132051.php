@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190715125057 extends AbstractMigration
+final class Version20190719132051 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,9 @@ final class Version20190715125057 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE quack (id INT AUTO_INCREMENT NOT NULL, content LONGTEXT DEFAULT NULL, created_at DATETIME DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE quack CHANGE author author_id INT NOT NULL');
+        $this->addSql('ALTER TABLE quack ADD CONSTRAINT FK_83D44F6FF675F31B FOREIGN KEY (author_id) REFERENCES duckuser (id)');
+        $this->addSql('CREATE INDEX IDX_83D44F6FF675F31B ON quack (author_id)');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +32,8 @@ final class Version20190715125057 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('DROP TABLE quack');
+        $this->addSql('ALTER TABLE quack DROP FOREIGN KEY FK_83D44F6FF675F31B');
+        $this->addSql('DROP INDEX IDX_83D44F6FF675F31B ON quack');
+        $this->addSql('ALTER TABLE quack CHANGE author_id author INT NOT NULL');
     }
 }

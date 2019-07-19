@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use http\Client\Curl\User;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -54,17 +56,23 @@ class Duckuser implements UserInterface
      * The below length depends on the "algorithm" you use for encoding
      * the password, but this works well with bcrypt.
      *
-     * @ORM\Column(type="string", length=64)
+     * @ORM\Column(type="string")
      */
     private $password;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="json_array")
      */
     private $roles;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Quack", mappedBy="author")
+     */
+    private $author;
+
     public function __construct() {
         $this->roles = array('ROLE_USER');
+        $this->author = new ArrayCollection();
     }
 
     // other properties and methods
@@ -149,6 +157,44 @@ class Duckuser implements UserInterface
     public function getUsername()
     {
         return $this->duckname;
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Quack[]
+     */
+    public function getAuthor(): Collection
+    {
+        return $this->author;
+    }
+
+    public function addAuthor(Quack $author): self
+    {
+        if (!$this->author->contains($author)) {
+            $this->author[] = $author;
+            $author->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAuthor(Quack $author): self
+    {
+        if ($this->author->contains($author)) {
+            $this->author->removeElement($author);
+            // set the owning side to null (unless already changed)
+            if ($author->getAuthor() === $this) {
+                $author->setAuthor(null);
+            }
+        }
+
+        return $this;
     }
 }
 

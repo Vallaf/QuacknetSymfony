@@ -11,8 +11,10 @@
             <tr>
                 <th>Id</th>
                 <th>Content</th>
+                <th>Author</th>
+                <th>Photo</th>
                 <th>Created_at</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +22,11 @@
             <tr>
                 <td>{{ quack.id }}</td>
                 <td>{{ quack.content }}</td>
+                <td>{{ quack.author.duckname }}</td>
+                <td>{{ quack.photo }}</td>
                 <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+
+
                 <td>
                     <a href="{{ path('quack_show', {'id': quack.id}) }}">show</a>
                     <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>

@@ -34,9 +34,12 @@ class QuackController extends AbstractController
     {
         $quack = new Quack();
         $form = $this->createForm(QuackType::class, $quack);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $quack->setAuthor($this->getUser());
+            $quack->setCreatedAt(new \DateTime('now',(new \DateTimeZone('Europe/Paris'))));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($quack);
             $entityManager->flush();
@@ -65,10 +68,13 @@ class QuackController extends AbstractController
      */
     public function edit(Request $request, Quack $quack): Response
     {
+        $this->denyAccessUnlessGranted('quack_edit', $quack);
         $form = $this->createForm(QuackType::class, $quack);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $quack->setCreatedAt(new \DateTime('now',(new \DateTimeZone('Europe/Paris'))));
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('quack_index');
@@ -85,7 +91,10 @@ class QuackController extends AbstractController
      */
     public function delete(Request $request, Quack $quack): Response
     {
+        $this->denyAccessUnlessGranted('quack_edit', $quack);
+
         if ($this->isCsrfTokenValid('delete'.$quack->getId(), $request->request->get('_token'))) {
+            $this->denyAccessUnlessGranted('quack_edit', $quack);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($quack);
             $entityManager->flush();
