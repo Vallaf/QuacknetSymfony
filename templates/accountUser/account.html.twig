@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quack{% endblock %}
+
+{% block body %}
+    <h1>DUCK my account</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ duckuser.id }}</td>
+        </tr>
+        <tr>
+            <th>Firstname</th>
+            <td>{{ duckuser.Firstname }}</td>
+        </tr>
+        <tr>
+            <th>Lastname</th>
+            <td>{{ duckuser.Lastname }}</td>
+        </tr>
+        <tr>
+            <th>Duckname</th>
+            <td>{{ duckuser.Duckname }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ duckuser.Email }}</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>{{ duckuser.Password }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+    <a href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
+{% endblock %}

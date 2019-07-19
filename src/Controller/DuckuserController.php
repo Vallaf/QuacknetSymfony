@@ -80,15 +80,23 @@ class DuckuserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="duckuser_show", methods={"GET"})
-     */
+ * @Route("/{id}", name="duckuser_show", methods={"GET"})
+ */
     public function show(Duckuser $duckuser): Response
     {
         return $this->render('duckuser/show.html.twig', [
             'duckuser' => $duckuser,
         ]);
     }
-
+    /**
+     * @Route("/account/{id}", name="duckuser_account", methods={"GET"})
+     */
+    public function showAccounnt(Duckuser $duckuser): Response
+    {
+        return $this->render('accountUser/account.html.twig', [
+            'duckuser' => $duckuser,
+        ]);
+    }
     /**
      * @Route("/{id}/edit", name="duckuser_edit", methods={"GET","POST"})
      */
