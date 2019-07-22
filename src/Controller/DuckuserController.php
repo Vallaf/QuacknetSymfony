@@ -102,6 +102,7 @@ class DuckuserController extends AbstractController
      */
     public function edit(Request $request, Duckuser $duckuser): Response
     {
+        $this->isGranted('duckuser_edit', $duckuser);
         $form = $this->createForm(DuckuserType::class, $duckuser);
         $form->handleRequest($request);
 

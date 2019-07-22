@@ -23,7 +23,7 @@
             </li>
             {% if is_granted('ROLE_USER') %}
             <li class="nav-item">
-                <a href="{{ path('duckuser_account', {'id': app.user.id }) }}"class="nav-link disabled" href="#">my account</a>
+                <a href="{{ path('duckuser_account', {'id': app.user.id }) }}"class="nav-link disabled" href="#">My account</a>
             </li>
             {% endif %}
 
