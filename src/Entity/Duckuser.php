@@ -70,6 +70,11 @@ class Duckuser implements UserInterface
      */
     private $author;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
+
     public function __construct() {
         $this->roles = array('ROLE_USER');
         $this->author = new ArrayCollection();
@@ -193,6 +198,18 @@ class Duckuser implements UserInterface
                 $author->setAuthor(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }

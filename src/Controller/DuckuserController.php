@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Duckuser;
 use App\Form\DuckuserType;
 use App\Repository\DuckuserRepository;
+use App\Service\FileUploader;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\SecurityBundle\Tests\Functional\Bundle\CsrfFormLoginBundle\Form\UserLoginType;
 use Symfony\Component\HttpFoundation\Request;
@@ -59,13 +60,19 @@ class DuckuserController extends AbstractController
     /**
      * @Route("/new", name="duckuser_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, FileUploader $fileUploader): Response
     {
         $duckuser = new Duckuser();
         $form = $this->createForm(DuckuserType::class, $duckuser);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $photoFile = $form['photo']->getData();
+            if ($photoFile) {
+                $photoFileName = $fileUploader->upload($photoFile);
+                $duckuser->setPhoto('/image/'.$photoFileName);
+            }
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($duckuser);
             $entityManager->flush();

@@ -3,7 +3,7 @@
 {% block title %}Edit Duckuser{% endblock %}
 
 {% block body %}
-
+<div class="container">
     <h1>Edit Duckuser</h1>
 
     {{ include('duckuser/_form.html.twig', {'button_label': 'Update'}) }}
@@ -11,4 +11,5 @@
     <a href="{{ path('duckuser_index') }}">Back to list</a>
 
     {{ include('duckuser/_delete_form.html.twig') }}
+</div>
 {% endblock %}

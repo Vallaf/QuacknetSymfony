@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Duckuser;
 use App\Form\RegistrationFormType;
 use App\Security\LoginFormAuthenticator;
+use App\Service\FileUploader;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,8 +17,14 @@ class RegistrationController extends AbstractController
 {
     /**
      * @Route("/register", name="app_register")
+     * @param Request $request
+     * @param FileUploader $fileUploader
+     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @param GuardAuthenticatorHandler $guardHandler
+     * @param LoginFormAuthenticator $authenticator
+     * @return Response
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
+    public function register(Request $request, FileUploader $fileUploader, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
     // passe objet request de type request et ajouter les namespaced
     {
         $user = new Duckuser();
@@ -32,7 +39,11 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+            $photoFile = $form['photo']->getData();
+            if ($photoFile) {
+                $photoFileName = $fileUploader->upload($photoFile);
+                $user->setPhoto('/image/'.$photoFileName);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user); //faire persister dans le temps le user
             $entityManager->flush(); // do it flush dans la bdd

@@ -15,7 +15,9 @@
                 <th>Duckname</th>
                 <th>Email</th>
                 <th>Password</th>
+                <th>Photo de profil</th>
                 <th>actions</th>
+
             </tr>
         </thead>
         <tbody>
@@ -27,6 +29,7 @@
                 <td>{{ duckuser.duckname }}</td>
                 <td>{{ duckuser.email }}</td>
                 <td>{{ duckuser.password }}</td>
+                <td><img src="{{ duckuser.photo }}" alt=""></td>
                 <td>
                     <a href="{{ path('duckuser_show', {'id':duckuser.id}) }}">show</a>
                     <a href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
