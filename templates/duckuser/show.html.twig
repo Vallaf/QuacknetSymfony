@@ -3,6 +3,7 @@
 {% block title %}Duckuser{% endblock %}
 
 {% block body %}
+<div class="container">
     <h1>Duckuser</h1>
 
     <table class="table">
@@ -10,6 +11,10 @@
             <tr>
                 <th>Id</th>
                 <td>{{ duckuser.id }}</td>
+            </tr>
+            <tr>
+                <th>Photo profil</th>
+                <td><figure ><img style="width: 100px; height: 80px;" src="{{ duckuser.photo }}" alt=""></figure></td>
             </tr>
             <tr>
                 <th>Firstname</th>
@@ -39,4 +44,5 @@
     <a href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
 
     {{ include('duckuser/_delete_form.html.twig') }}
+</div>
 {% endblock %}

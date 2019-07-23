@@ -3,42 +3,46 @@
 {% block title %}Quack index{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <h1>QUACKS</h1>
 
-    <h1>QUACKS</h1>
-
-    <table class="table">
-        <thead>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Id</th>
+                <th>Photo</th>
                 <th>Content</th>
                 <th>Author</th>
-                <th>Photo</th>
                 <th>Created_at</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for quack in quacks %}
-            <tr>
-                <td>{{ quack.id }}</td>
-                <td>{{ quack.content }}</td>
-                <td>{{ quack.author.duckname }}</td>
-                <td><img src="{{ quack.photo }}" alt=""></td>
-                <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </thead>
+            <tbody>
+            {% for quack in quacks %}
+                <tr>
+                    <td>{{ quack.id }}</td>
+                    <td>
+                        <figure><img style="width: 100px; height: 80px;" src="{{ quack.photo }}" alt=""></figure>
+                    </td>
+                    <td>{{ quack.content }}</td>
+                    <td>{{ quack.author.duckname }}</td>
+
+                    <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
 
 
-                <td>
-                    <a href="{{ path('quack_show', {'id': quack.id}) }}">show</a>
-                    <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                    <td>
+                        <a href="{{ path('quack_show', {'id': quack.id}) }}">show</a>
+                        <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <a href="{{ path('quack_new') }}">Create new</a>
+        <a href="{{ path('quack_new') }}">Create new</a>
+    </div>
 {% endblock %}

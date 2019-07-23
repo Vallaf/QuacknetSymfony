@@ -3,7 +3,7 @@
 {% block title %}Quack{% endblock %}
 
 {% block body %}
-
+<div class="container">
     <h1>Quack</h1>
 
     <table class="table">
@@ -11,6 +11,10 @@
             <tr>
                 <th>Id</th>
                 <td>{{ quack.id }}</td>
+            </tr>
+            <tr>
+                <th>Quack photo</th>
+                <td><figure ><img style="width: 100px; height: 80px;" src="{{ quack.photo }}" alt=""></figure></td>
             </tr>
             <tr>
                 <th>Content</th>
@@ -28,4 +32,5 @@
     <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
 
     {{ include('quack/_delete_form.html.twig') }}
+</div>
 {% endblock %}

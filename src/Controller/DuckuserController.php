@@ -30,11 +30,11 @@ class DuckuserController extends AbstractController
         $form = $this->createForm(DuckuserType::class, $duckuser);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-        // encode password
-        $password = $passwordEncoder->encodePassword($duckuser,$duckuser->getPassword());
-        $duckuser->setPassword();
+            // encode password
+            $password = $passwordEncoder->encodePassword($duckuser, $duckuser->getPassword());
+            $duckuser->setPassword();
 
-        //enregistrer nouveau duck
+            //enregistrer nouveau duck
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($duckuser);
             $entityManager->flush();
@@ -47,6 +47,7 @@ class DuckuserController extends AbstractController
         );
 
     }
+
     /**
      * @Route("/", name="duckuser_index", methods={"GET"})
      */
@@ -70,7 +71,7 @@ class DuckuserController extends AbstractController
             $photoFile = $form['photo']->getData();
             if ($photoFile) {
                 $photoFileName = $fileUploader->upload($photoFile);
-                $duckuser->setPhoto('/image/'.$photoFileName);
+                $duckuser->setPhoto('/image/' . $photoFileName);
             }
 
             $entityManager = $this->getDoctrine()->getManager();
@@ -87,14 +88,15 @@ class DuckuserController extends AbstractController
     }
 
     /**
- * @Route("/{id}", name="duckuser_show", methods={"GET"})
- */
+     * @Route("/{id}", name="duckuser_show", methods={"GET"})
+     */
     public function show(Duckuser $duckuser): Response
     {
         return $this->render('duckuser/show.html.twig', [
             'duckuser' => $duckuser,
         ]);
     }
+
     /**
      * @Route("/account/{id}", name="duckuser_account", methods={"GET"})
      */
@@ -104,16 +106,23 @@ class DuckuserController extends AbstractController
             'duckuser' => $duckuser,
         ]);
     }
+
     /**
      * @Route("/{id}/edit", name="duckuser_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Duckuser $duckuser): Response
+    public function edit(Request $request, Duckuser $duckuser, FileUploader $fileUploader): Response
     {
         $this->isGranted('duckuser_edit', $duckuser);
         $form = $this->createForm(DuckuserType::class, $duckuser);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $photoFile = $form['photo']->getData();
+            if ($photoFile) {
+                $photoFileName = $fileUploader->upload($photoFile);
+                $duckuser->setPhoto('/image/' . $photoFileName);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('duckuser_index');
@@ -130,7 +139,7 @@ class DuckuserController extends AbstractController
      */
     public function delete(Request $request, Duckuser $duckuser): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$duckuser->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $duckuser->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($duckuser);
             $entityManager->flush();
