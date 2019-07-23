@@ -23,7 +23,7 @@
                 <td>{{ quack.id }}</td>
                 <td>{{ quack.content }}</td>
                 <td>{{ quack.author.duckname }}</td>
-                <td>{{ quack.photo }}</td>
+                <td><img src="{{ quack.photo }}" alt=""></td>
                 <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
 
 

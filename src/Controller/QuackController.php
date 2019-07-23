@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Quack;
 use App\Form\QuackType;
 use App\Repository\QuackRepository;
+use App\Service\FileUploader;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -30,7 +31,7 @@ class QuackController extends AbstractController
     /**
      * @Route("/new", name="quack_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, FileUploader $fileUploader): Response
     {
         $quack = new Quack();
         $form = $this->createForm(QuackType::class, $quack);
@@ -40,6 +41,11 @@ class QuackController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $quack->setAuthor($this->getUser());
             $quack->setCreatedAt(new \DateTime('now',(new \DateTimeZone('Europe/Paris'))));
+            $photoFile = $form['photo']->getData();
+            if ($photoFile) {
+                $photoFileName = $fileUploader->upload($photoFile);
+                $quack->setPhoto('/image/'.$photoFileName);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($quack);
             $entityManager->flush();
@@ -75,6 +81,7 @@ class QuackController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $quack->setCreatedAt(new \DateTime('now',(new \DateTimeZone('Europe/Paris'))));
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('quack_index');

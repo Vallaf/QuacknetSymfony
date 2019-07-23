@@ -18,10 +18,11 @@ class RegistrationController extends AbstractController
      * @Route("/register", name="app_register")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
+    // passe objet request de type request et ajouter les namespaced
     {
         $user = new Duckuser();
-        $form = $this->createForm(RegistrationFormType::class, $user);
-        $form->handleRequest($request);
+        $form = $this->createForm(RegistrationFormType::class, $user); //
+        $form->handleRequest($request); //annalyse la request
 
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
@@ -33,8 +34,8 @@ class RegistrationController extends AbstractController
             );
 
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
-            $entityManager->flush();
+            $entityManager->persist($user); //faire persister dans le temps le user
+            $entityManager->flush(); // do it flush dans la bdd
 
             // do anything else you need here, like send an email
 
