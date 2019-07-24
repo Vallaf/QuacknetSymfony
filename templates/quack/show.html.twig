@@ -4,16 +4,25 @@
 
 {% block body %}
     <div class="container">
-        <h1>Quack</h1>
-        <tr>
-            <th>Created_at</th>
-            <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-        </tr>
+
         <div class="card" style="width: 18rem;">
+
             <img class="card-img-top" src="{{ quack.photo }}" alt="Card image cap">
+            <tr>
+                <th>Created at</th>
+                <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <div>
+                    <th>Author :</th>
+                    <td>{{ quack.author.duckname }}</td>
+                </div>
+
+            </tr>
+
             <div class="card-body">
-                <h5 class="card-title">Content</h5>
+                <h5 class="card-title">{{ quack.title }}</h5>
+
                 <p class="card-text">{{ quack.content }}</p>
+
             </div>
 
             <div class="card-body">
@@ -25,6 +34,7 @@
 
 
             </div>
+            </ul>
         </div>
     </div>
 {% endblock %}

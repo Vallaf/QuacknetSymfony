@@ -10,6 +10,7 @@
             <thead>
             <tr>
                 <th>Photo</th>
+                <th>Title</th>
                 <th>Content</th>
                 <th>Author</th>
                 <th>Created_at</th>
@@ -23,6 +24,7 @@
                     <td>
                         <figure><img style="width: 100px; height: 80px;" src="{{ quack.photo }}" alt=""></figure>
                     </td>
+                    <td>{{ quack.title }}</td>
                     <td>{{ quack.content }}</td>
                     <td>{{ quack.author.duckname }}</td>
 
