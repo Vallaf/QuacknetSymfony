@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8414f00-e7c0-44dc-a2be-c14ff833ec89" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/DuckuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DuckuserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/QuackController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/QuackController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CommentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accountUser/account.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accountUser/account.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/duckuser/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/duckuser/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/duckuser/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/duckuser/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/duckuser/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/duckuser/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/duckuser/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/duckuser/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/duckuser/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/duckuser/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/quack/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quack/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/quack/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quack/_delete_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/quack/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quack/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/quack/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quack/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
@@ -40,23 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/quack/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="23" column="115" selection-start-line="23" selection-start-column="115" selection-end-line="23" selection-end-column="115" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#figure#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/duckuser/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="270">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -64,86 +53,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/duckuser/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="27" column="113" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="113" />
+            <state relative-caret-position="35">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/DuckuserType.php">
+        <entry file="file://$PROJECT_DIR$/src/Form/CommentType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-              <folding>
-                <element signature="e#28#52#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/DuckuserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-535">
-              <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
-              <folding>
-                <element signature="e#34#58#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/QuackController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-              <folding>
-                <element signature="e#34#55#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/quack/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#figure#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/quack/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/duckuser/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="981">
-              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-              <folding>
-                <element signature="e#34#58#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="510">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -163,11 +92,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Form/DucktableType.php" />
         <option value="$PROJECT_DIR$/src/Entity/Ducktable.php" />
         <option value="$PROJECT_DIR$/src/Entity/DuckUser.php" />
         <option value="$PROJECT_DIR$/src/Controller/DucktableController.php" />
-        <option value="$PROJECT_DIR$/templates/duckuser/_delete_form.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/DuckuserRepository.php" />
         <option value="$PROJECT_DIR$/public/css/duck.css" />
         <option value="$PROJECT_DIR$/templates/home/home.html.twig" />
@@ -177,7 +104,6 @@
         <option value="$PROJECT_DIR$/templates/Home/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/navbarloginregister.html.twig" />
         <option value="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" />
-        <option value="$PROJECT_DIR$/templates/accountUser/account.html.twig" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20190719111423.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20190719112119.php" />
         <option value="$PROJECT_DIR$/src/Entity/Quack.php" />
@@ -186,7 +112,6 @@
         <option value="$PROJECT_DIR$/src/Security/Voter/DuckuserVoter.php" />
         <option value="$PROJECT_DIR$/templates/quack/new.html.twig" />
         <option value="$PROJECT_DIR$/templates/quack/_form.html.twig" />
-        <option value="$PROJECT_DIR$/templates/duckuser/_form.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Duckuser.php" />
         <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
         <option value="$PROJECT_DIR$/templates/quackhome/index.html.twig" />
@@ -194,7 +119,6 @@
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Comment.php" />
-        <option value="$PROJECT_DIR$/src/Form/CommentType.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Form/QuackType.php" />
@@ -204,16 +128,21 @@
         <option value="$PROJECT_DIR$/src/Form/RegistrationFormType.php" />
         <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
-        <option value="$PROJECT_DIR$/templates/duckuser/edit.html.twig" />
-        <option value="$PROJECT_DIR$/templates/registration/register.html.twig" />
         <option value="$PROJECT_DIR$/templates/duckuser/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/QuackController.php" />
         <option value="$PROJECT_DIR$/templates/quack/edit.html.twig" />
-        <option value="$PROJECT_DIR$/templates/duckuser/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/DuckuserController.php" />
+        <option value="$PROJECT_DIR$/src/Form/CommentType.php" />
+        <option value="$PROJECT_DIR$/templates/quack/_delete_form.html.twig" />
         <option value="$PROJECT_DIR$/templates/duckuser/show.html.twig" />
-        <option value="$PROJECT_DIR$/templates/quack/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/accountUser/account.html.twig" />
+        <option value="$PROJECT_DIR$/templates/duckuser/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/duckuser/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/duckuser/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/registration/register.html.twig" />
         <option value="$PROJECT_DIR$/templates/quack/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/duckuser/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/quack/show.html.twig" />
       </list>
     </option>
   </component>
@@ -358,12 +287,6 @@
             <path>
               <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -388,12 +311,43 @@
               <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Security" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Security" type="462c0819:PsiDirectoryNode" />
+              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuacknetSymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="accountUser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="QuacknetSymfony" type="b2602c69:ProjectViewProjectNode" />
@@ -484,18 +438,19 @@
       <workItem from="1563526490147" duration="17802000" />
       <workItem from="1563779361692" duration="2065000" />
       <workItem from="1563781463614" duration="17630000" />
-      <workItem from="1563866406260" duration="17320000" />
+      <workItem from="1563866406260" duration="17945000" />
+      <workItem from="1563953348122" duration="4926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121511000" />
+    <option name="totallyTimeSpent" value="127062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -569,9 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/quack/_delete_form.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/quack/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -589,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/accountUser/account.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Quack.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -603,13 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/navbarloginregister.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="17" selection-start-line="15" selection-start-column="9" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/navbarloginregister.html.twig" />
     <entry file="file://$PROJECT_DIR$/templates/quackhome/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -681,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -712,13 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-117">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/CommentType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -777,20 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/duckuser/_delete_form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-415">
@@ -798,24 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/quack/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/duckuser/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/duckuser/_form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -843,19 +740,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/DuckuserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-535">
+        <state relative-caret-position="2490">
           <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
           <folding>
             <element signature="e#34#58#0#PHP" expanded="true" />
@@ -873,34 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/duckuser/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/duckuser/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="27" column="113" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/duckuser/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/quack/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/QuackController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -911,23 +770,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/quack/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/quack/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/quack/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/accountUser/account.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/duckuser/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#figure#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/duckuser/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#figure#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/duckuser/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/quack/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-265">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/duckuser/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/quack/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="23" column="115" selection-start-line="23" selection-start-column="115" selection-end-line="23" selection-end-column="115" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#figure#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/duckuser/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/CommentType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/quack/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

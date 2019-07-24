@@ -3,34 +3,28 @@
 {% block title %}Quack{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Quack</h1>
+    <div class="container">
+        <h1>Quack</h1>
+        <tr>
+            <th>Created_at</th>
+            <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ quack.photo }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Content</h5>
+                <p class="card-text">{{ quack.content }}</p>
+            </div>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ quack.id }}</td>
-            </tr>
-            <tr>
-                <th>Quack photo</th>
-                <td><figure ><img style="width: 100px; height: 80px;" src="{{ quack.photo }}" alt=""></figure></td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ quack.content }}</td>
-            </tr>
-            <tr>
-                <th>Created_at</th>
-                <td>{{ quack.createdAt ? quack.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="card-body">
+                <a href="{{ path('quack_index') }}">back to list</a>
 
-    <a href="{{ path('quack_index') }}">back to list</a>
+                <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
 
-    <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
+                {{ include('quack/_delete_form.html.twig') }}
 
-    {{ include('quack/_delete_form.html.twig') }}
-</div>
+
+            </div>
+        </div>
+    </div>
 {% endblock %}

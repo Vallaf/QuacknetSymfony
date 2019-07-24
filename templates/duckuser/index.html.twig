@@ -9,7 +9,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+
                 <th>Photo de profil</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
@@ -24,7 +24,7 @@
         <tbody>
         {% for duckuser in duckusers %}
             <tr>
-                <td>{{ duckuser.id }}</td>
+
                 <td><figure ><img style="width: 100px; height: 80px;" src="{{ duckuser.photo }}" alt=""></figure></td>
                 <td>{{ duckuser.firstname }}</td>
                 <td>{{ duckuser.lastname }}</td>
@@ -33,8 +33,8 @@
                 <td>{{ duckuser.password }}</td>
 
                 <td>
-                    <a href="{{ path('duckuser_show', {'id':duckuser.id}) }}">show</a>
-                    <a href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('duckuser_show', {'id':duckuser.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}

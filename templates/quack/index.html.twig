@@ -9,7 +9,6 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Id</th>
                 <th>Photo</th>
                 <th>Content</th>
                 <th>Author</th>
@@ -20,7 +19,7 @@
             <tbody>
             {% for quack in quacks %}
                 <tr>
-                    <td>{{ quack.id }}</td>
+
                     <td>
                         <figure><img style="width: 100px; height: 80px;" src="{{ quack.photo }}" alt=""></figure>
                     </td>
@@ -31,8 +30,8 @@
 
 
                     <td>
-                        <a href="{{ path('quack_show', {'id': quack.id}) }}">show</a>
-                        <a href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
+                        <a class="btn btn-primary" href="{{ path('quack_show', {'id': quack.id}) }}">show</a>
+                        <a class="btn btn-primary" href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
                     </td>
                 </tr>
             {% else %}

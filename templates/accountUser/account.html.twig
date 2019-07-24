@@ -3,7 +3,8 @@
 {% block title %}Quack{% endblock %}
 
 {% block body %}
-    <h1>DUCK my account</h1>
+<div class="container">
+    <h1>MY ACCOUNT</h1>
 
     <table class="table">
         <tbody>
@@ -36,5 +37,6 @@
 
 
 
-    <a href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
+    <a class="btn btn-primary" href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
+</div>
 {% endblock %}
