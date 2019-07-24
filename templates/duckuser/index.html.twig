@@ -3,20 +3,18 @@
 {% block title %}Duckuser index{% endblock %}
 
 {% block body %}
-<div class="container">
+
     <h1>DUCKS</h1>
 
     <table class="table">
         <thead>
             <tr>
-
                 <th>Photo de profil</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Duckname</th>
                 <th>Email</th>
                 <th>Password</th>
-
                 <th>actions</th>
 
             </tr>
@@ -24,7 +22,6 @@
         <tbody>
         {% for duckuser in duckusers %}
             <tr>
-
                 <td><figure ><img style="width: 100px; height: 80px;" src="{{ duckuser.photo }}" alt=""></figure></td>
                 <td>{{ duckuser.firstname }}</td>
                 <td>{{ duckuser.lastname }}</td>
@@ -46,5 +43,5 @@
     </table>
 
     <a href="{{ path('duckuser_new') }}">Create new</a>
-</div>
+
 {% endblock %}

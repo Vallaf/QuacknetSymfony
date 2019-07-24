@@ -10,6 +10,7 @@
             <thead>
             <tr>
                 <th>Photo</th>
+                <th>Id</th>
                 <th>Title</th>
                 <th>Content</th>
                 <th>Author</th>
@@ -24,6 +25,7 @@
                     <td>
                         <figure><img style="width: 100px; height: 80px;" src="{{ quack.photo }}" alt=""></figure>
                     </td>
+                    <td>{{ quack.id }}</td>
                     <td>{{ quack.title }}</td>
                     <td>{{ quack.content }}</td>
                     <td>{{ quack.author.duckname }}</td>
@@ -34,6 +36,7 @@
                     <td>
                         <a class="btn btn-primary" href="{{ path('quack_show', {'id': quack.id}) }}">show</a>
                         <a class="btn btn-primary" href="{{ path('quack_edit', {'id': quack.id}) }}">edit</a>
+
                     </td>
                 </tr>
             {% else %}

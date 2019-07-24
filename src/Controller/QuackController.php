@@ -30,10 +30,12 @@ class QuackController extends AbstractController
 
     /**
      * @Route("/new", name="quack_new", methods={"GET","POST"})
+     *  @Route("/{id}/comment/new", name="quack_comment_new", methods={"GET","POST"})
      */
-    public function new(Request $request, FileUploader $fileUploader): Response
+    public function new(Request $request, FileUploader $fileUploader, Quack $parent = null): Response
     {
         $quack = new Quack();
+        $quack->setParent($parent);
         $form = $this->createForm(QuackType::class, $quack);
 
         $form->handleRequest($request);
@@ -88,6 +90,27 @@ class QuackController extends AbstractController
             }
             $this->getDoctrine()->getManager()->flush();
 
+            return $this->redirectToRoute('quack_index');
+        }
+
+        return $this->render('quack/edit.html.twig', [
+            'quack' => $quack,
+            'form' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/{id}/comment", name="quack_comment", methods={"GET","POST"})
+     */
+    public function comment(Request $request, Quack $quack, FileUploader $fileUploader): Response
+    {
+        $this->denyAccessUnlessGranted('quack_edit', $quack);
+        $form = $this->createForm(QuackType::class, $quack);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $quack->setCreatedAt(new \DateTime('now',(new \DateTimeZone('Europe/Paris'))));
+            $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('quack_index');
         }
 
