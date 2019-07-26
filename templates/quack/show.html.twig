@@ -22,16 +22,16 @@
                 <h5 class="card-title">{{ quack.title }}</h5>
                 <p class="card-text">{{ quack.content }}</p>
 
-
             </div>
 
             <div class="card-body">
                 <a href="{{ path('quack_index') }}">Back to list</a>
-                <a href="{{ path('quack_edit', {'id': quack.id}) }}">Edit</a>
-                <a href="{{ path('quack_comment', {'id': quack.id}) }}">Comment</a>
+                <a href="{{ path('quack_edit', {'quack': quack.id}) }}">Edit</a>
+                <a href="{{ path('quack_newcomment', {'parent': quack.id}) }}">Comment</a>
                 {{ include('quack/_delete_form.html.twig') }}
-
             </div>
+
         </div>
     </div>
+
 {% endblock %}

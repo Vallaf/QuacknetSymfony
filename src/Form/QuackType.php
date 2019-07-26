@@ -16,7 +16,7 @@ class QuackType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('photo', FileType::class, [
+             ->add('photo', FileType::class, [
                 'label' => 'photo',
 
                 // unmapped means that this field is not associated to any entity property

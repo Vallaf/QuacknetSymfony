@@ -28,7 +28,7 @@ class QuackVoter extends Voter
         // ... (check conditions and return true to grant permission) ...
         switch ($attribute) {
             case 'quack_edit':
-//                return $this->security->isGranted('ROLE_USER');
+ //            return $this->security->isGranted('ROLE_USER');
                 return in_array('ROLE_ADMIN', $user->getRoles()) ||  $user->getId() == $subject->getAuthor()->getId();
 
                 // logic to determine if the user can EDIT

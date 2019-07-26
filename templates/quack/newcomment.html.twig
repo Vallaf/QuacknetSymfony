@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New comment{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <h1>Create a comment</h1>
+
+        {{ include('quack/_form.html.twig') }}
+
+    <a href="{{ path('quack_index') }}">Back to Quack list</a>
+    </div>
+{% endblock %}

@@ -30,8 +30,8 @@
                 <td>{{ duckuser.password }}</td>
 
                 <td>
-                    <a class="btn btn-primary" href="{{ path('duckuser_show', {'id':duckuser.id}) }}">show</a>
-                    <a class="btn btn-primary" href="{{ path('duckuser_edit', {'id': duckuser.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('duckuser_show', {'duckuser':duckuser.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('duckuser_edit', {'duckuser': duckuser.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}

@@ -88,7 +88,7 @@ class DuckuserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="duckuser_show", methods={"GET"})
+     * @Route("/{duckuser}", name="duckuser_show", methods={"GET"})
      */
     public function show(Duckuser $duckuser): Response
     {
@@ -98,7 +98,7 @@ class DuckuserController extends AbstractController
     }
 
     /**
-     * @Route("/account/{id}", name="duckuser_account", methods={"GET"})
+     * @Route("/account/{duckuser}", name="duckuser_account", methods={"GET"})
      */
     public function showAccounnt(Duckuser $duckuser): Response
     {
@@ -108,7 +108,7 @@ class DuckuserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="duckuser_edit", methods={"GET","POST"})
+     * @Route("/{duckuser}/edit", name="duckuser_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Duckuser $duckuser, FileUploader $fileUploader): Response
     {
@@ -135,7 +135,7 @@ class DuckuserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="duckuser_delete", methods={"DELETE"})
+     * @Route("/{duckuser}", name="duckuser_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Duckuser $duckuser): Response
     {
